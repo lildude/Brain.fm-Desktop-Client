@@ -13,8 +13,8 @@ app.on('window-all-closed', function () {
 
 app.on('ready', function () {
 	mainWindow = new browserWindow({
-		width             : 1280,
-		height            : 720,
+		width             : 960,
+		height            : 450,
 		'title'           : 'Brain.fm',
 		webSecurity       : false,
 		'node-integration': false
