@@ -35,7 +35,6 @@ app.on('ready', function () {
 
 	// Global shortcuts..
 	globalShortcut.register('MediaNextTrack', function () {skip();});
-	globalShortcut.register('MediaStop', function () {playPause();}); // ?
 	globalShortcut.register('MediaPlayPause', function () {playPause();});
 	//globalShortcut.register('MediaPreviousTrack', function() {});
 
@@ -49,7 +48,7 @@ function skip() {
 	if (mainWindow == null) {
 		return;
 	}
-	// todo
+  mainWindow.webContents.executeJavaScript('$("#skip_button").click()');
 }
 
 function playPause() {
@@ -57,16 +56,5 @@ function playPause() {
 		return;
 	}
 
-	mainWindow.webContents.executeJavaScript('' +
-		'if ($("#play_button").hasClass("tc_pause")) {' +
-		'$("#jquery_jplayer").jPlayer("play", 0);' +
-		'$("#play_button").removeClass("tc_pause").addClass("tc_play");' +
-		'} else {' +
-		'$("#jquery_jplayer").jPlayer("play", 1);' +
-		'$("#play_button").removeClass("tc_play").addClass("tc_pause");' +
-		'}'
-	);
+  mainWindow.webContents.executeJavaScript('$("#play_button").click()');
 }
-
-
-
