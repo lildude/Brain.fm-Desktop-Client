@@ -1,12 +1,12 @@
 {
-  "name": "brainfm-desktop",
+  "name": "Brain.fm",
   "version": "1.0.1",
-  "description": "brain.fm desktop client",
+  "description": "Brain.fm Desktop Client",
 
   "main": "main.js",
   "scripts": {
     "start": "electron main.js",
-    "package": "electron-packager . brainfm --platform=darwin --arch=x64 --version=0.35.1 --out=./out --overwrite --icon=./brainfm.icns"
+    "package": "electron-packager . --platform=darwin --arch=x64 --version=0.35.1 --out=./out --overwrite --icon=./brainfm.icns"
   },
 
   "author": "Dinius",

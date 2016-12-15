@@ -3,6 +3,7 @@
 var app            = require('app'),
     browserWindow  = require('browser-window'),
     globalShortcut = require('global-shortcut'),
+    Menu           = require('menu'),
     mainWindow     = null;
 
 app.on('window-all-closed', function () {
@@ -41,6 +42,23 @@ app.on('ready', function () {
   mainWindow.on('closed', function () {
     mainWindow = null;
   });
+
+  // Create the Application's main menu
+  var template = [{
+      label: app.getName(),
+      submenu: [
+        { label: "About Brain.fm", selector: "orderFrontStandardAboutPanel:" },
+        { type: "separator" },
+        { label: "Quit", accelerator: "Command+Q", click: function() { app.quit(); }}
+      ]}, {
+      label: "Edit",
+      submenu: [
+        { label: "Copy", accelerator: "CmdOrCtrl+C", selector: "copy:" },
+        { label: "Paste", accelerator: "CmdOrCtrl+V", selector: "paste:" },
+      ]}
+  ];
+
+  Menu.setApplicationMenu(Menu.buildFromTemplate(template));
 });
 
 
