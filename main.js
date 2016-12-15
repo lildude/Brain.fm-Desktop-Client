@@ -1,3 +1,5 @@
+'use strict';
+
 var app            = require('app'),
 		browserWindow  = require('browser-window'),
 		globalShortcut = require('global-shortcut'),
