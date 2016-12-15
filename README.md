@@ -11,6 +11,8 @@ This is a fork of the original work at https://github.com/Dinius/Brain.fm-Deskto
 
 ... along with a few other tweaks to syntax and other things I like 😄.
 
+**WARNING:** I've only tested this on macOS. You experience may differ on other platforms.
+
 ## Develop
 
 For those new to Electron development, you can build this as follows:
