@@ -1,24 +1,27 @@
 {
   "name": "brainfm-desktop",
-  
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "brain.fm desktop client",
-  
+
   "main": "main.js",
   "scripts": {
     "start": "electron main.js",
-    "package": "electron-packager . brainfm --all --version=0.35.1 --out=./out --overwrite --icon=./brainfm.ico"
+    "package": "electron-packager . brainfm --platform=darwin --arch=x64 --version=0.35.1 --out=./out --overwrite --icon=./brainfm.icns"
   },
-  
+
   "author": "Dinius",
   "license": "MIT",
   "homepage": "https://brain.fm",
-  
+  "contributors": [
+    {"name": "bruz"},
+    {"name": "lildude"}
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/atom/electron-quick-start.git"
   },
   "devDependencies": {
-    "electron-prebuilt": "^0.35.0"
+    "electron-prebuilt": "^0.35.0",
+    "electron-packager": "8.3.0"
   }
 }
